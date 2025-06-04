@@ -146,7 +146,7 @@
   <div id="uiWrapper">
     <!-- Sidebar de canales -->
     <div class="sidebar" id="channelList">
-      <div class="channel selected" tabindex="0" data-url="https://live20.bozztv.com/akamaissh101/ssh101/retrotoons/chunks.m3u8">RetroToons Op1</div>
+      <div class="channel selected" tabindex="0" data-url="https://live20.bozztv.com/akamaissh101/ssh101/retrotoons/chunks.m3u8">RetroToons Op</div>
       <div class="channel" tabindex="0" data-url="https://live20.bozztv.com/giatv/giatv-Retrotoonstv/Retrotoonstv/playlist.m3u8">RetroToons Op2</div>
       
       
