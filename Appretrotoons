@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RetroToons TV</title>
+  <style>
+    body {
+      background: linear-gradient(to bottom, #f9d423, #ff4e50);
+      color: #fff;
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin: 1rem 0;
+    }
+
+    video {
+      width: 90%;
+      max-width: 800px;
+      height: auto;
+      margin: 1rem auto;
+      border: 5px solid white;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    }
+
+    .channel-list {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin: 2rem auto;
+    }
+
+    .channel {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 1rem 2rem;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 1.5rem;
+      transition: background 0.3s;
+    }
+
+    .channel:hover, .channel:focus {
+      background: rgba(255, 255, 255, 0.3);
+    }
+  </style>
+</head>
+<body>
+  <h1>RetroToons TV</h1>
+
+  <video id="tvPlayer" controls autoplay>
+    <source src="https://live20.bozztv.com/akamaissh101/ssh101/retrotoons/chunks.m3u8" type="application/x-mpegURL">
+    Tu navegador no soporta reproducción de video.
+  </video>
+
+  <div class="channel-list">
+    <div class="channel" onclick="changeChannel('https://live20.bozztv.com/giatv/giatv-Retrotoonstv/Retrotoonstv/playlist.m3u8')">Canal 1</div>
+    <div class="channel" onclick="changeChannel('https://live20.bozztv.com/akamaissh101/ssh101/retrotoons/chunks.m3u8')">Canal 2</div>
+    <div class="channel" onclick="changeChannel('https://example.com/stream/canal3.m3u8')">Canal 3</div>
+  </div>
+
+  <script>
+    function changeChannel(url) {
+      const player = document.getElementById('tvPlayer');
+      player.src = url;
+      player.play();
+    }
+  </script>
+</body>
+</html>
